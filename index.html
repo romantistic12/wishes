@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Birthday Wish</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+  <div id="hearts-layer"></div>
+
+  <main id="scene">
+
+    <!-- Wax-seal opening gate -->
+    <button id="seal" aria-label="Open your birthday wish">
+      <span class="seal-ring"></span>
+      <span class="seal-core">
+        <span class="seal-letter">G</span>
+      </span>
+      <span class="seal-label">click to open</span>
+    </button>
+
+    <!-- The letter -->
+    <section id="letter" aria-hidden="true">
+      <div class="letter-frame">
+        <p class="eyebrow">a small wish, made with care</p>
+        <h1 class="title">Happy Birthday</h1>
+        <div class="rule"></div>
+        <p id="typed-text" class="wish-text"><span id="cursor" class="cursor">&nbsp;</span></p>
+      </div>
+    </section>
+
+    <!-- The finale -->
+    <section id="finale" aria-hidden="true">
+      <div class="finale-heart">
+        <svg viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="finale-heart-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#e8ce86"/>
+              <stop offset="55%" stop-color="#c9a227"/>
+              <stop offset="100%" stop-color="#8f7fc0"/>
+            </linearGradient>
+          </defs>
+          <path d="M23.6 0c-3.3 0-6.2 1.9-7.6 4.8C14.6 1.9 11.7 0 8.4 0 3.8 0 0 3.8 0 8.4c0 8.1 8.6 13.4 16 20.7 7.4-7.3 16-12.5 16-20.7C32 3.8 28.2 0 23.6 0z"/>
+        </svg>
+      </div>
+      <p class="finale-title">Happy Birthday</p>
+      <p class="finale-sub">now, and always — adored.</p>
+    </section>
+
+  </main>
+
+  <button id="sound-toggle" aria-label="Toggle music">
+    <span id="sound-icon">♪</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
